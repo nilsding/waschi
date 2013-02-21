@@ -105,14 +105,11 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 			$rs=$remoteserver[$arrayrand];
 			post_request($rs, $data);
 			$status="Deine W&auml;sche... SIE IST WEG!";
-			header("refresh:3; url=".$_SERVER['REQUEST_URI']);
 		}else{
 			$status="Hier ist dein/e ".$object."! Alles fein sauber! :)";
-			header("refresh:3; url=".$_SERVER['REQUEST_URI']);
 		}
 	}else{
 		$status="Also DAS kann ich nicht waschen.";
-		header("refresh:3; url=".$_SERVER['REQUEST_URI']);
 	}
 
 
