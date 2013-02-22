@@ -18,3 +18,11 @@ For playing:
 - list.php - Here you can change the look of the list.
 - echowash.php - For client reasons. ( see washi.lisp )
 - found - Your list of found laundry. 
+
+## Rights
+It's important, that your webserver has a read/write access on Waschi. 
+My solution for an apache webserver in your Waschi web directory is:
+
+- chown www-data:www-data *
+- chmod 644 *
+
