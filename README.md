@@ -23,6 +23,7 @@ For playing:
 It's important, that your webserver has a read/write access on Waschi. 
 My solution for an apache webserver in your Waschi web directory is:
 
-- chown www-data:www-data /path/to/your/waschi/webfolder
-- chmod -R 644 /path/to/your/waschi/webfolder/*
+- chown root:www-data /path/to/your/waschi/webfolder
+- chmod 775 /path/to/your/waschi/webfolder
+- chmod -R 664 /path/to/your/waschi/webfolder/*
 
