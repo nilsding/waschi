@@ -4,8 +4,8 @@
 ?>
 <!DOCTYPE html>
 <html>
-<title>Ihre Waschmaschine auf IHRE ADRESSE</title>
 <head>
+<title>Ihre Waschmaschine auf IHRE ADRESSE</title>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <script>
@@ -21,16 +21,16 @@ $(document).ready(function() {
 </head>
 <body>
 <h1>Dies ist Ihre Waschmaschine auf IHRE ADRESSE</h1>
-<font face="Courier">
-&nbsp;&nbsp; ___<br />
-&nbsp;&nbsp;/……/|<br />
-&nbsp;&nbsp;|@ |/<br />
-&nbsp;&nbsp;----<br />
-</font>
+<pre>
+ ___
+/……/|
+|@ |/
+----
+</pre>
 <form method="POST">
  
- <input type="text" name="Kleidung" id="kleidung" \>
- <input type="submit" value="Waschvorgang starten." \> 
+ <input type="text" name="Kleidung" id="kleidung" />
+ <input type="submit" value="Waschvorgang starten." /> 
  <button id="randomword">Pointless Word <noscript>(JavaScript ben&ouml;tigt)</noscript></button><br />
  <?php if(isset($status)) echo($status); ?>
 </form>
