@@ -2,23 +2,36 @@
 	include("list.php");
 	include("wash.php");
 ?>
+<!DOCTYPE html>
 <html>
-<title>Ihre Waschmaschine auf IHRE ADRESSE</title>
 <head>
+<title>Ihre Waschmaschine auf IHRE ADRESSE</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<h1>Dies ist Ihre Waschmaschine auf IHRE ADRESSE</h1>
+<script>
+$(document).ready(function() {
+	$("#randomword").click(function(event) {
+		$.get("pointlessword.php", function(data) {
+			$("#kleidung").val(data);
+		});
+		event.preventDefault();
+	});
+});
+</script>
 </head>
 <body>
-<font face="Courier">
-&nbsp;&nbsp; ___<br />
-&nbsp;&nbsp;/……/|<br />
-&nbsp;&nbsp;|@ |/<br />
-&nbsp;&nbsp;----<br />
-</font>
+<h1>Dies ist Ihre Waschmaschine auf IHRE ADRESSE</h1>
+<pre>
+ ___
+/……/|
+|@ |/
+----
+</pre>
 <form method="POST">
  
- <input type="text" name="Kleidung" \>
- <input type="submit" value="Waschvorgang starten." \> <br />
+ <input type="text" name="Kleidung" id="kleidung" />
+ <input type="submit" value="Waschvorgang starten." /> 
+ <button id="randomword">Pointless Word <noscript>(JavaScript ben&ouml;tigt)</noscript></button><br />
  <?php if(isset($status)) echo($status); ?>
 </form>
 <br /><br />
