@@ -84,35 +84,37 @@ $keyarray=array("key1" => $key1, "key2" => $key2);
 $remoteserverarray=post_request("http://waschi.meikodis.org/servers.php", $keyarray);
 $remoteserver=explode("\n",$remoteserverarray['content']);
 
+if(!count($remoteserver)<=1){
 
 
-if($_SERVER['REQUEST_METHOD'] == "POST") {
+	if($_SERVER['REQUEST_METHOD'] == "POST") {
 
-	$object=$_POST["Kleidung"];
+		$object=$_POST["Kleidung"];
 
-	if(!in_filter($object)){
+		if(!in_filter($object)){
 
-		if(rand(0,100) <= 50) {
+			if(rand(0,100) <= 50) {
 
-			$data=array("key1" => $key1, "key2" => $key2, "object" => $object);
+				$data=array("key1" => $key1, "key2" => $key2, "object" => $object);
 
-
-			$arrayrand = array_rand($remoteserver);
-			while(strstr($remoteserver[$arrayrand], $_SERVER['SERVER_NAME']) || $remoteserver[$arrayrand] == "" ){
 
 				$arrayrand = array_rand($remoteserver);
+				while(strstr($remoteserver[$arrayrand], $_SERVER['SERVER_NAME']) || $remoteserver[$arrayrand] == "" ){
+
+					$arrayrand = array_rand($remoteserver);
+				}
+				$rs=$remoteserver[$arrayrand];
+				post_request($rs, $data);
+				$status="Deine W&auml;sche... SIE IST WEG!";
+			}else{
+				$status="Hier ist dein/e ".$object."! Alles fein sauber! :)";
 			}
-			$rs=$remoteserver[$arrayrand];
-			post_request($rs, $data);
-			$status="Deine W&auml;sche... SIE IST WEG!";
 		}else{
-			$status="Hier ist dein/e ".$object."! Alles fein sauber! :)";
+			$status="Also DAS kann ich nicht waschen.";
 		}
-	}else{
-		$status="Also DAS kann ich nicht waschen.";
+
+
 	}
-
-
-}
+}else $status="Der Stecker ist kaputt. :(";
 
 ?>

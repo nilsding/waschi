@@ -2,7 +2,7 @@
 
 #################################
 # Waschi Waschmaschinenverbund  #
-# Version: 0.4-0004             #
+# Version: 0.4-0005             #
 # (c) 2013 by MeikoDis          #
 # License: GNU-AGPL v3          #
 #################################
@@ -15,12 +15,12 @@
 
 		if(strlen($words) > $limit) return true;
 
-                $filter = array(" ",",",".","<",">","--","\"","'","&","|","(",")",":","[","]",";","\\","/","!","=","{","}","#","$"); // Zeichen, die die Übersendung nicht zulassen.
+                $filter = array(",",".","<",">","--","\"","'","&","|","(",")",":","[","]",";","\\","/","!","=","{","}","#","$"); // Zeichen, die die Übersendung nicht zulassen.
                 $noe=count($filter);
 
                 $counter=0;
                 foreach($filter as $bad){
-                        if(stristr($words, $bad) === false) $counter++;
+                        if(!stristr($words, $bad)) $counter++;
                 }
 
                 if($counter == $noe) return false;
