@@ -1,4 +1,4 @@
-# Waschi v0.5-0002
+# Waschi v0.5-0003
 This is Waschi.
 A "hide and seek of your laundry" game for the web.
 
@@ -27,3 +27,5 @@ My solution for an apache webserver in your Waschi web directory is:
 - chmod 775 /path/to/your/waschi/webfolder
 - chmod -R 664 /path/to/your/waschi/webfolder/*
 
+
+See more at http://waschi.org/

@@ -25,8 +25,6 @@
 			fwrite($fh, $obj);
 			fclose($fh);
 
-
-#			shell_exec("LANG=de_DE.utf8; echo ".$obj." >> found");
 		}
 
 	}

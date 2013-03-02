@@ -40,11 +40,11 @@ Pl&ouml;tzlich aufgetauchte Gegenstände mit unbekannter Herkunft: <br />
 
 <br /><br />
 <!-- Footer START | PLEASE don't remove this (Copyrightinformation)-->
-<a href="http://waschi.meikodis.org/join/waschi.tar.gz">Waschi</a> is licensed under <a href="http://www.gnu.org/licenses/agpl-3.0.de.html" target="_blank">GNU-AGPL v3</a> &copy; 2013 by <a href="http://meikodis.org/">MeikoDis</a>.<br />
-Further information, see <a href="http://waschi.meikodis.org/" target="_blank">Waschi Waschmaschinenverbund</a>
+<a href="http://waschi.org/join/waschi.tar.gz">Waschi</a> is licensed under <a href="http://www.gnu.org/licenses/agpl-3.0.de.html" target="_blank">GNU-AGPL v3</a> &copy; 2013 by <a href="http://meikodis.org/">MeikoDis</a>.<br />
+Further information, see <a href="http://waschi.org/" target="_blank">Waschi Waschmaschinenverbund</a>
 <br />
 <!-- Additional content -->
-<a href="http://waschi.meikodis.org/index.php?page=bluepages">Andere Waschmaschinen</a> · <a href="https://github.com/MeikoDis/waschi">GitHub</a>
+<a href="http://waschi.org/index.php?page=bluepages">Andere Waschmaschinen</a> · <a href="https://github.com/MeikoDis/waschi">GitHub</a>
 <!-- Footer END -->
 </body>
 </html>

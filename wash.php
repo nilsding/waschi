@@ -2,7 +2,7 @@
 
 #################################
 # Waschi Waschmaschinenverbund  #
-# Version: 0.4-0004             #
+# Version: 0.5-0003             #
 # (c) 2013 by MeikoDis          #
 # License: GNU-AGPL v3          #
 #################################
@@ -81,7 +81,7 @@ function post_request($url, $data, $referer='') {
 
 $keyarray=array("key1" => $key1, "key2" => $key2);
 
-$remoteserverarray=post_request("http://waschi.meikodis.org/servers.php", $keyarray);
+$remoteserverarray=post_request("http://waschi.org/servers.php", $keyarray);
 $remoteserver=explode("\n",$remoteserverarray['content']);
 
 if(!count($remoteserver)<=1){
