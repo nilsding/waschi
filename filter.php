@@ -16,7 +16,7 @@
 		if(strlen($words) > $limit) return true;
 		if($words=="") return true;
 
-                $filter = array("",",",".","<",">","--","\"","'","&","|","(",")",":","[","]",";","\\","/","!","=","{","}","#","$"); // Zeichen, die die Übersendung nicht zulassen.
+                $filter = array(",",".","<",">","--","\"","'","&","|","(",")",":","[","]",";","\\","/","!","=","{","}","#","$"); // Zeichen, die die Übersendung nicht zulassen.
                 $noe=count($filter);
 
                 $counter=0;
