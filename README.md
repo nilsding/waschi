@@ -20,12 +20,15 @@ For playing:
 - found - Your list of found laundry. 
 
 ## Rights
-It's important, that your webserver has a read/write access on Waschi. 
-My solution for an apache webserver in your Waschi web directory is:
+It's important, that your *webserver has a read/write access* on your Waschi folder.
+For me that works using an apache webserver:
+
 
 - chown root:www-data /path/to/your/waschi/webfolder
 - chmod 775 /path/to/your/waschi/webfolder
 - chmod -R 664 /path/to/your/waschi/webfolder/*
 
+This may differs from your necessary access configuration.
 
+## 
 See more at http://waschi.org/
