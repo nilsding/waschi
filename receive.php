@@ -21,7 +21,7 @@
 			$obj = escapeshellcmd($_POST['object'])."\n";
 
 			
-			$fh = fopen("found", 'a') or die("can't open file");
+			$fh = fopen("./found", 'a') or die("can't open file");
 			fwrite($fh, $obj);
 			fclose($fh);
 
