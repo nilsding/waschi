@@ -1,4 +1,4 @@
-# Waschi v0.5-0005
+# Waschi v0.6-0001
 This is Waschi.
 A "hide and seek of your laundry" game for the web.
 

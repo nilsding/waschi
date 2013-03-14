@@ -1,7 +1,7 @@
 <?php
 	$version="Waschi Waschmaschinenverbund";
 	$version.=" ";
-	$version.="v0.5-0005";
+	$version.="v0.6-0001";
 
 	echo($version);
 ?>

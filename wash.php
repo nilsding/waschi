@@ -89,32 +89,35 @@ if(!count($remoteserver)<=1){
 
 	if($_SERVER['REQUEST_METHOD'] == "POST") {
 
-		$object=$_POST["Kleidung"];
+		if(!stristr($remoteserver[0], "ERROR")){
 
-		if(!in_filter($object)){
+			$object=$_POST["Kleidung"];
 
-			if(rand(0,100) <= 50) {
+			if(!in_filter($object)){
 
-				$data=array("key1" => $key1, "key2" => $key2, "object" => $object);
+				if(rand(0,100) <= 50) {
 
-
-				$arrayrand = array_rand($remoteserver);
-				while(strstr($remoteserver[$arrayrand], $_SERVER['SERVER_NAME']) || $remoteserver[$arrayrand] == "" ){
+					$data=array("key1" => $key1, "key2" => $key2, "object" => $object);
 
 					$arrayrand = array_rand($remoteserver);
-				}
-				$rs=$remoteserver[$arrayrand];
-				post_request($rs, $data);
-				$status="Deine W&auml;sche... SIE IST WEG!";
-			}else{
-				$status="Hier ist dein/e ".$object."! Alles fein sauber! :)";
-			}
-		}else{
-			$status="Also DAS kann ich nicht waschen.";
-		}
+					while(strstr($remoteserver[$arrayrand], $_SERVER['SERVER_NAME']) || $remoteserver[$arrayrand] == "" ){
 
+						$arrayrand = array_rand($remoteserver);
+					}
+					$rs=$remoteserver[$arrayrand];
+					post_request($rs, $data);
+					$status="Deine W&auml;sche... SIE IST WEG!";
+				}else{
+					$status="Hier ist dein/e ".$object."! Alles fein sauber! :)";
+				}
+			}else{
+				$status="Also DAS kann ich nicht waschen.";
+			}
+
+		}else $status="R&uuml;ste deine Waschmaschine erst einmal auf.";
 
 	}
-}else $status="Der Stecker ist kaputt. :(";
+
+}else $status="Der Stecker ist grad ein bisschen kaputt. :(";
 
 ?>
