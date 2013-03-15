@@ -1,6 +1,7 @@
 # Waschi v0.6-0001
+### (or Waschi Waschmaschinenverbund)
 This is Waschi.
-A "hide and seek of your laundry" game for the web.
+A "hide and seek of your laundry" network game over the whole webservers!
 
 ## Requirements
 
@@ -16,8 +17,10 @@ For playing:
 
 - index.php - Your visible webpage. You can customize it (except the copyright part).
 - list.php - Here you can change the look of the list.
-- echowash.php - For client reasons. ( see washi.lisp )
+- echowash.php - For client reasons. ( see washi.lisp for example )
 - found - Your list of found laundry. 
+
+
 
 ## Rights
 It's important, that your *webserver has a read/write access* on your Waschi folder.
@@ -28,7 +31,19 @@ For me that works using an apache webserver:
 - chmod 775 /path/to/your/waschi/webfolder
 - chmod -R 664 /path/to/your/waschi/webfolder/*
 
-This may differs from your necessary access configuration.
 
-## 
+**This may differs from your necessary access configuration.*
+
+
+## Clean list
+I recommend to clear the list every week. You can do it via cronjob. I'm doing it every sunday in the noon.
+You can do it on your server through typing 
+- echo "00 12 * * 0 www-data /bin/rm /YOUR/WASCHI/DIR/found 2> /dev/null" >> /etc/cron.d/waschi
+- chmod +x /etc/cron.d/waschi
+
+
+## License
+Waschi (Waschi Waschmaschinenverbund) is licensed under GNU-AGPL v3+.
+
+
 See more at http://waschi.org/
