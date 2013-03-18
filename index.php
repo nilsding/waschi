@@ -6,7 +6,7 @@
 <html>
 <head>
 <title>Ihre Waschmaschine auf IHRE ADRESSE</title>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>----I don't like google-->
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <script>
 $(document).ready(function() {

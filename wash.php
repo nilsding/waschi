@@ -106,12 +106,12 @@ if(!count($remoteserver)<=1){
 					}
 					$rs=$remoteserver[$arrayrand];
 					post_request($rs, $data);
-					$status="Deine W&auml;sche... SIE IST WEG!";
+					$status="Deine W&auml;sche (".$object.") ... SIE IST WEG!";
 				}else{
 					$status="Hier ist dein/e ".$object."! Alles fein sauber! :)";
 				}
 			}else{
-				$status="Also DAS kann ich nicht waschen.";
+				$status="Also DAS(".$object.") kann ich nicht waschen.";
 			}
 
 		}else $status="R&uuml;ste deine Waschmaschine erst einmal auf.";
