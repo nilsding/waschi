@@ -4,7 +4,6 @@ This is Waschi.
 A "hide and seek of your laundry" network game over the whole webservers!
 
 ## Requirements
-
 For hosting:
 - A webserver!
 - PHP5
@@ -18,8 +17,8 @@ Or a client like:
 - waschi-cs-client (https://github.com/pixeldesu/waschi-cs-client) written in C#
 - waschi-cli (https://github.com/fliiiix/waschi-cli/) written in ruby
 - washi-cli (https://github.com/vanita5/washi-cli) written in python
-## Scripts - What's that file?
 
+## Scripts - What's that file?
 - index.php - Your visible webpage. You can customize it (except the copyright part).
 - list.php - Here you can change the look of the list.
 - echowash.php - For client reasons. ( see washi.lisp for example )
