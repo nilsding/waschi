@@ -95,7 +95,7 @@ if(!count($remoteserver)<=1){
 
 			if(!in_filter($object)){
 
-				if(rand(0,100) <= 50) {
+				if( $odd = rand(1,2)%2 ) { 
 
 					$data=array("key1" => $key1, "key2" => $key2, "object" => $object);
 

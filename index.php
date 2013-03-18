@@ -28,11 +28,10 @@ $(document).ready(function() {
 ----
 </pre>
 <form method="POST">
- 
  <input type="text" name="Kleidung" id="kleidung" />
- <input type="submit" value="Waschvorgang starten." /> 
+ <input type="submit" value="Waschvorgang starten." />
  <button id="randomword">Pointless Word <noscript>(JavaScript ben&ouml;tigt)</noscript></button><br />
- <?php if(isset($status)) echo($status); ?>
+ <?php if(isset($status)) echo($status); ?> 
 </form>
 <br /><br />
 Pl&ouml;tzlich aufgetauchte Gegenstände mit unbekannter Herkunft: <br />
