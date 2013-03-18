@@ -12,11 +12,12 @@ For hosting:
 
 For playing:
 - A browser
-- A client like:
--- washi.lisp (https://gist.github.com/codepony/4994410) written in CommonLisp
--- waschi-cs-client (https://github.com/pixeldesu/waschi-cs-client) written in C#
--- waschi-cli (https://github.com/fliiiix/waschi-cli/) written in ruby
--- washi-cli (https://github.com/vanita5/washi-cli) written in python
+
+Or a client like:
+- washi.lisp (https://gist.github.com/codepony/4994410) written in CommonLisp
+- waschi-cs-client (https://github.com/pixeldesu/waschi-cs-client) written in C#
+- waschi-cli (https://github.com/fliiiix/waschi-cli/) written in ruby
+- washi-cli (https://github.com/vanita5/washi-cli) written in python
 ## Scripts - What's that file?
 
 - index.php - Your visible webpage. You can customize it (except the copyright part).
