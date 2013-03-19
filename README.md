@@ -1,6 +1,19 @@
 # Waschi v0.6-0001
 ### (or Waschi Waschmaschinenverbund)
-This is Waschi.
+This is a not working Waschi port!
+
+##Changes done:
+- included a getback.php & a giveaway.php
+- changed some things in the original files
+- made my own "save-files"
+
+##TO-DO:
+- create a 'users.php','pwds.php' and 'new\_found.php'
+- make a `<?php' on the first line of those files - to make them unreadable for others.
+- Fix the org. found file - somehow I can't delete lines there
+
+All other changes *should* be found in source. 
+
 A "hide and seek of your laundry" network game over the whole webservers!
 
 ## Requirements

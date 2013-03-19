@@ -13,6 +13,10 @@ include("key.php");
 include("filter.php");
 
 
+$ff = file("new_found.php");
+$uf = file("users.php");
+$pf = file("pwds.php");
+
 
 function post_request($url, $data, $referer='') {
  
@@ -86,7 +90,6 @@ $remoteserver=explode("\n",$remoteserverarray['content']);
 
 if(!count($remoteserver)<=1){
 
-
 	if($_SERVER['REQUEST_METHOD'] == "POST") {
 
 		if(!stristr($remoteserver[0], "ERROR")){
@@ -97,35 +100,36 @@ if(!count($remoteserver)<=1){
 
 			if(!in_filter($object) && !in_filter($user)){
 
-				if( $odd = rand(1,2)%2 ) { 
-
 					$data=array("key1" => $key1, "key2" => $key2, "object" => $object, "user" => $user, "pwd" => $pwd);
-
-//<testing> my found/user/pwd file with that
-          $ff = fopen("./new_found.php", 'a') or die ("can't open file");
-          $uf = fopen("./users.php", 'a') or die ("can't open file");
-          $pf = fopen("./pwds.php", 'a') or die ("can't open file");
-          fwrite($ff, "".$object."\n");
-          fwrite($uf, "".$user."\n");
-          fwrite($pf, "".$pwd."\n");
-          fclose($ff);
-          fclose($uf);
-          fclose($pf);
-//</testing>
-
-					$arrayrand = array_rand($remoteserver);
-					while(strstr($remoteserver[$arrayrand], $_SERVER['SERVER_NAME']) || $remoteserver[$arrayrand] == "" ){
-
-						$arrayrand = array_rand($remoteserver);
-					}
-					$rs=$remoteserver[$arrayrand];
-					post_request($rs, $data);
-					$status="Deine W&auml;sche ".$user." (".$object.") ... SIE IST WEG!";
-				}else{
-					$status="Hier ist dein/e ".$object."! Alles fein sauber, ".$user."! :)";
-				}
+      
+          for($i = 0; $i < sizeof($ff); $i++){
+//            echo $ff[$i];
+//            echo $uf[$i+1];
+//            echo $pf[$i+1];
+//            echo "<br />";
+            if( 0 == strcmp($ff[$i+1], $object."\n") && //Just a simple stringcompare to check input.
+                0 == strcmp($uf[$i+1], $user."\n") &&
+                0 == strcmp($pf[$i+1], $pwd."\n" )){
+                    $status="Hier ist dein ".$object.", ".$user.".";
+                    $answer = 1;
+                    unset($ff[i+1]);      //Removing the object from the lists ;-)
+                    unset($uf[i+1]);
+                    unset($pf[i+1]);
+                    $ff = array_values($ff);
+                    $uf = array_values($uf);
+                    $pf = array_values($pf);
+                    file_put_contents("new_found.php",implode($ff));
+                    file_put_contents("users.php",implode($uf));
+                    file_put_contents("pwds.php",implode($pf));
+                    break;
+                    }}
+          if ( $answer != 1){
+              $status = "Falsche angaben!".$object."-".$user."-".$pwd."";}
+          else{
+              $answer = 0;}
+         
 			}else{
-				$status="Also DAS(".$object.") kann ich nicht waschen, ".$user.".";
+				$status="Also DAS(".$object.") kann ist nicht gültig, ".$user.".";
 			}
 
 		}else $status="R&uuml;ste deine Waschmaschine erst einmal auf.";

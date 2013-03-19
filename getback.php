@@ -1,6 +1,5 @@
 <?php
-	include("list.php");
-	include("wash.php");
+	include("giveaway.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,7 +8,7 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 </head>
 <body>
-<h1>Dies ist Ihre Waschmaschine auf IHRE ADRESSE</h1>
+<h1>Dies ist Ihre W&auml;schentname auf IHRE ADRESSE</h1>
 <pre>
  ___
 /……/|
@@ -26,9 +25,14 @@
 </form>
 <br /><br />
 Pl&ouml;tzlich aufgetauchte Gegenstände mit unbekannter Herkunft: <br />
-<?php if(isset($list)) echo($list); ?>
+<?php 
+for ( $i = 1; $i <= sizeof($ff); $i++){
+  echo "".$ff[$i]."<br />";}
+
+
+ ?>
 <br />
-Um Ihre Waesche zu bekommen, gehen Sie bitte <a href="getback.php" target="_blank">hier</a>.
+Um Ihre Waesche zu abzugeben, gehen Sie bitte <a href="index.php" target="_blank">hier</a>.
 <br /><br />
 <!-- Footer START | PLEASE don't remove this (Copyrightinformation)-->
 <a href="http://waschi.org/join/waschi.tar.gz">Waschi</a> is licensed under <a href="http://www.gnu.org/licenses/agpl-3.0.de.html" target="_blank">GNU-AGPL v3</a> &copy; 2013 by <a href="http://meikodis.org/">MeikoDis</a>.<br />
