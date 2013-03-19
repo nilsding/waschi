@@ -6,18 +6,7 @@
 <html>
 <head>
 <title>Ihre Waschmaschine auf IHRE ADRESSE</title>
-<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>----I don't like google-->
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<script>
-$(document).ready(function() {
-	$("#randomword").click(function(event) {
-		$.get("pointlessword.php", function(data) {
-			$("#kleidung").val(data);
-		});
-		event.preventDefault();
-	});
-});
-</script>
 </head>
 <body>
 <h1>Dies ist Ihre Waschmaschine auf IHRE ADRESSE</h1>
@@ -28,9 +17,11 @@ $(document).ready(function() {
 ----
 </pre>
 <form method="POST">
- <input type="text" name="Kleidung" id="kleidung" />
+ Objekt:
+ <input type="text" name="Kleidung" id="kleidung" /><br />
+ Username:
+ <input type="text" name="Username" id="user" /><br />
  <input type="submit" value="Waschvorgang starten." />
- <button id="randomword">Pointless Word <noscript>(JavaScript ben&ouml;tigt)</noscript></button><br />
  <?php if(isset($status)) echo($status); ?> 
 </form>
 <br /><br />

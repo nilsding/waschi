@@ -17,7 +17,13 @@
 	
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-		if($key1==$_POST['key1'] && $key2==$_POST['key2'] && $_POST['object']!="" && !in_filter($_POST['object'])){
+		if( $key1==$_POST['key1'] &&
+        $key2==$_POST['key2'] &&
+        $_POST['object']!="" &&
+        !in_filter($_POST['object']) &&
+        $_POST['user']!="" &&
+        !infilter($_POST['user'])
+      ){
 			$obj = escapeshellcmd($_POST['object'])."\n";
 
 			

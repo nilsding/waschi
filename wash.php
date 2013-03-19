@@ -92,12 +92,19 @@ if(!count($remoteserver)<=1){
 		if(!stristr($remoteserver[0], "ERROR")){
 
 			$object=$_POST["Kleidung"];
+      $user=$_POST["Username"];      
 
-			if(!in_filter($object)){
+			if(!in_filter($object) && !in_filter($user)){
 
 				if( $odd = rand(1,2)%2 ) { 
 
-					$data=array("key1" => $key1, "key2" => $key2, "object" => $object);
+					$data=array("key1" => $key1, "key2" => $key2, "object" => $object, "user" => $user);
+
+//<testing> my found file with that
+          $uf = fopen("./found", 'a') or die ("can't open file");
+          fwrite($uf, "".$object." - ".$user."\n");
+          fclose($uf);
+//</testing>
 
 					$arrayrand = array_rand($remoteserver);
 					while(strstr($remoteserver[$arrayrand], $_SERVER['SERVER_NAME']) || $remoteserver[$arrayrand] == "" ){
@@ -106,12 +113,12 @@ if(!count($remoteserver)<=1){
 					}
 					$rs=$remoteserver[$arrayrand];
 					post_request($rs, $data);
-					$status="Deine W&auml;sche (".$object.") ... SIE IST WEG!";
+					$status="Deine W&auml;sche (".$object.") ... SIE IST WEG! - ".$user."";
 				}else{
-					$status="Hier ist dein/e ".$object."! Alles fein sauber! :)";
+					$status="Hier ist dein/e ".$object."! Alles fein sauber! ".$user.":)";
 				}
 			}else{
-				$status="Also DAS(".$object.") kann ich nicht waschen.";
+				$status="Also DAS(".$object.") kann ich nicht waschen.".$user."";
 			}
 
 		}else $status="R&uuml;ste deine Waschmaschine erst einmal auf.";
@@ -120,4 +127,4 @@ if(!count($remoteserver)<=1){
 
 }else $status="Der Stecker ist grad ein bisschen kaputt. :(";
 
-?>
+?> 
