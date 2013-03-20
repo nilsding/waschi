@@ -7,12 +7,18 @@ This is a not working Waschi port!
 - changed some things in the original files
 - made my own "save-files"
 
-##TO-DO:
-- create a 'users.php','pwds.php' and 'new\_found.php'
-- make a `<?php' on the first line of those files - to make them unreadable for others.
-- Fix the org. found file - somehow I can't delete lines there
-
 All other changes *should* be found in source. 
+
+##TO-DO:
+- create a 'users.php' and 'pwds.php'
+- put a `<?php' on the first line of those files - to make them unreadable for others.
+
+##Future-Plans:
+- Get a pwds/users/found transfer betweet servers (like the current object transfer)
+- Put wash.php & giveaway.php together
+- Same for index.php & getback.php
+- Write client-files (echowash.php like) to help coders by making work easier
+- Implement a function to send every success giveaway (just usernames) to waschi.org - For a cool high-score list!
 
 A "hide and seek of your laundry" network game over the whole webservers!
 
