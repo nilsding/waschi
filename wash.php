@@ -1,12 +1,25 @@
 <?php
 
-#################################
-# Waschi Waschmaschinenverbund  #
-# Version: 0.5-0003             #
-# (c) 2013 by MeikoDis          #
-# License: GNU-AGPL v3          #
-#################################
 
+#    Waschi Waschmaschinenverbund
+#    Copyright (C) 2013  MeikoDis
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+#    Contact:
+#    Identi.ca or Twitter:  @MeikoDis
+#    Email or Jabber:       meikodis@meikodis.org
 
 
 include("key.php");
@@ -102,7 +115,7 @@ if(!count($remoteserver)<=1){
 					$data=array("key1" => $key1, "key2" => $key2, "object" => $object, "user" => $user, "pwd" => $pwd);
 
 //<testing> my found/user/pwd file with that
-          $ff = fopen("./new_found.php", 'a') or die ("can't open file");
+          $ff = fopen("./found", 'a') or die ("can't open file");
           $uf = fopen("./users.php", 'a') or die ("can't open file");
           $pf = fopen("./pwds.php", 'a') or die ("can't open file");
           fwrite($ff, "".$object."\n");

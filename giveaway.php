@@ -1,19 +1,32 @@
 <?php
 
-#################################
-# Waschi Waschmaschinenverbund  #
-# Version: 0.5-0003             #
-# (c) 2013 by MeikoDis          #
-# License: GNU-AGPL v3          #
-#################################
 
+#    Waschi Waschmaschinenverbund
+#    Copyright (C) 2013  MeikoDis
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+#    Contact:
+#    Identi.ca or Twitter:  @MeikoDis
+#    Email or Jabber:       meikodis@meikodis.org
 
 
 include("key.php");
 include("filter.php");
 
 
-$ff = file("new_found.php");
+$ff = file("found");
 $uf = file("users.php");
 $pf = file("pwds.php");
 
@@ -107,22 +120,28 @@ if(!count($remoteserver)<=1){
 //            echo $uf[$i+1];
 //            echo $pf[$i+1];
 //            echo "<br />";
-            if( 0 == strcmp($ff[$i+1], $object."\n") && //Just a simple stringcompare to check input.
+
+            if( 0 == strcmp($ff[$i], $object."\n") && //Just a simple stringcompare to check input.
                 0 == strcmp($uf[$i+1], $user."\n") &&
                 0 == strcmp($pf[$i+1], $pwd."\n" )){
                     $status="Hier ist dein ".$object.", ".$user.".";
                     $answer = 1;
-                    unset($ff[i+1]);      //Removing the object from the lists ;-)
-                    unset($uf[i+1]);
-                    unset($pf[i+1]);
-                    $ff = array_values($ff);
-                    $uf = array_values($uf);
-                    $pf = array_values($pf);
-                    file_put_contents("new_found.php",implode($ff));
+                    //Removing the object from the lists
+                    $ff[$i] = '';      
+                    $ff = array_filter($ff);
+                    file_put_contents("found",implode($ff));
+                    
+                    $uf[$i+1] = '';  
+                    $uf = array_filter($uf);
                     file_put_contents("users.php",implode($uf));
+                    
+                    $pf[$i+1] = '';
+                    $pf = array_filter($pf);
                     file_put_contents("pwds.php",implode($pf));
+                    
                     break;
                     }}
+
           if ( $answer != 1){
               $status = "Falsche angaben!".$object."-".$user."-".$pwd."";}
           else{
