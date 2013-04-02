@@ -11,7 +11,11 @@ For hosting:
 - Some water to drink.
 
 For playing:
-- A browser or washi.lisp ( see: https://gist.github.com/codepony/4994410 )
+- A browser
+or
+- washi.lisp ( see: https://gist.github.com/codepony/4994410 )
+- waschi-cs-client ( see: https://github.com/pixeldesu/waschi-cs-client )
+- waschi-cli ( see: https://github.com/fliiiix/waschi-cli/ )
 
 ## Scripts - What's that file?
 
