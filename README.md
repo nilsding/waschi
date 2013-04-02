@@ -15,7 +15,8 @@ For playing:
 or
 - washi.lisp ( see: https://gist.github.com/codepony/4994410 )
 - waschi-cs-client ( see: https://github.com/pixeldesu/waschi-cs-client )
-- waschi-cli ( see: https://github.com/fliiiix/waschi-cli/ )
+- waschi-cli (Ruby) ( see: https://github.com/fliiiix/waschi-cli/ )
+- waschi-cli (Python) ( see: https://github.com/vanita5/washi-cli/ )
 
 ## Scripts - What's that file?
 
