@@ -25,7 +25,9 @@
 include("key.php");
 include("filter.php");
 
-
+$ff = file("found");
+$uf = file("users.php");
+$pf = file("pwds.php");
 
 function post_request($url, $data, $referer='') {
  

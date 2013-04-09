@@ -1,4 +1,4 @@
-# Waschi v0.6-0001
+# Waschi v0.6-0002
 ### (or Waschi Waschmaschinenverbund)
 This is a not working Waschi port!
 

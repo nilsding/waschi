@@ -26,9 +26,8 @@
 
 		$limit=25; //Zeichenlimit
 
-		if(strlen($words) > $limit) return true;
 
-		if(preg_match("/[^a-zA-Z0-9 ÄÖÜäöüß]/usi", $words)) return true;
+		if(preg_match("/[^a-zA-Z0-9 ÄÖÜäöüß]/usi", $words) && strlen($words) > $limit) return true;
 		else return false;
 
         }
