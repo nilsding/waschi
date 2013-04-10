@@ -7,6 +7,8 @@
 # License: GNU-AGPL v3          #
 #################################
 
-	$key1="Waschschhscihahaischihwaschiw45";
-	$key2="1087409385898FAFASDTEGAJAN";
+## PLEASE REGISTER YOUR WASCHMASCHINE AT WASCHI.ORG TO GET THESE KEYS!
+
+	$key1="";
+	$key2="";
 ?>
