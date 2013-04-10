@@ -22,10 +22,6 @@ All other changes *should* be found in source.
 
 A "hide and seek of your laundry" network game over the whole webservers!
 
-<<<<<<< HEAD
-=======
-
->>>>>>> upstream/master
 ## Requirements
 For hosting:
 - A webserver!
@@ -34,28 +30,12 @@ For hosting:
 
 For playing:
 - A browser
-<<<<<<< HEAD
 
 Or a client like:
 - washi.lisp (https://gist.github.com/codepony/4994410) written in CommonLisp
 - waschi-cs-client (https://github.com/pixeldesu/waschi-cs-client) written in C#
 - waschi-cli (https://github.com/fliiiix/waschi-cli/) written in ruby
 - washi-cli (https://github.com/vanita5/washi-cli) written in python
-
-## Scripts - What's that file?
-- index.php - Your visible webpage. You can customize it (except the copyright part).
-- list.php - Here you can change the look of the list.
-- echowash.php - For client reasons. ( see washi.lisp for example )
-- found - Your list of found laundry. 
-=======
-or
-- washi.lisp ( see: https://gist.github.com/codepony/4994410 )
-- waschi-cs-client ( see: https://github.com/pixeldesu/waschi-cs-client )
-- waschi-cli (Ruby) ( see: https://github.com/fliiiix/waschi-cli/ )
-- waschi-cli (Python) ( see: https://github.com/vanita5/washi-cli/ )
-
-
->>>>>>> upstream/master
 
 ## Installation
 
