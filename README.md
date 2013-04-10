@@ -1,6 +1,6 @@
-# Waschi v0.6-0002
+# Waschi v0.6-0003
 ### (or Waschi Waschmaschinenverbund)
-This is a not working Waschi port!
+This is a non working Waschi port!
 
 ##Changes done:
 - included a getback.php & a giveaway.php
@@ -22,6 +22,10 @@ All other changes *should* be found in source.
 
 A "hide and seek of your laundry" network game over the whole webservers!
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
 ## Requirements
 For hosting:
 - A webserver!
@@ -30,6 +34,7 @@ For hosting:
 
 For playing:
 - A browser
+<<<<<<< HEAD
 
 Or a client like:
 - washi.lisp (https://gist.github.com/codepony/4994410) written in CommonLisp
@@ -42,10 +47,21 @@ Or a client like:
 - list.php - Here you can change the look of the list.
 - echowash.php - For client reasons. ( see washi.lisp for example )
 - found - Your list of found laundry. 
+=======
+or
+- washi.lisp ( see: https://gist.github.com/codepony/4994410 )
+- waschi-cs-client ( see: https://github.com/pixeldesu/waschi-cs-client )
+- waschi-cli (Ruby) ( see: https://github.com/fliiiix/waschi-cli/ )
+- waschi-cli (Python) ( see: https://github.com/vanita5/washi-cli/ )
 
 
+>>>>>>> upstream/master
 
-## Rights
+## Installation
+
+Extract the files to your becoming waschi webfolder.
+
+### Rights
 It's important, that your *webserver has a read/write access* on your Waschi folder.
 For me that works using an apache webserver:
 
@@ -58,11 +74,16 @@ For me that works using an apache webserver:
 **This may differs from your necessary access configuration.*
 
 
-## Clean list
+### Clean the list
 I recommend to clear the list every week. You can do it via cronjob. I'm doing it every sunday in the noon.
 You can do it on your server through typing 
 - echo "00 12 * * 0 www-data /bin/rm /YOUR/WASCHI/DIR/found 2> /dev/null" >> /etc/cron.d/waschi
 - chmod +x /etc/cron.d/waschi
+
+
+### Register your Waschi!
+Go to http://waschi.org/register/ to register your Waschi. After registering you'll get two keys via mail which you have to put into the "key.php".
+
 
 
 ## License
@@ -70,3 +91,14 @@ Waschi (Waschi Waschmaschinenverbund) is licensed under GNU-AGPL v3+.
 
 
 See more at http://waschi.org/
+
+
+
+##FAQ thing
+
+### Scripts - What's that file?
+- index.php - Your visible webpage. You can customize it (except the copyright part).
+- list.php - Here you can change the look of the list.
+- echowash.php - For client reasons. ( see washi.lisp for example )
+- found - Your list of found laundry. 
+

@@ -22,6 +22,8 @@
 #    Email or Jabber:       meikodis@meikodis.org
 
 
-	$key1="Waschschhscihahaischihwaschiw45";
-	$key2="1087409385898FAFASDTEGAJAN";
+## PLEASE REGISTER YOUR WASCHMASCHINE AT WASCHI.ORG TO GET THESE KEYS!
+
+	$key1="";
+	$key2="";
 ?>

@@ -22,13 +22,15 @@
 #    Email or Jabber:       meikodis@meikodis.org
 
 
-        function in_filter($words){
+  function in_filter($words){
 
+		$regex="/[^(a-zA-Z0-9 ÄÖÜäöüßéèêë)]/u";
 		$limit=25; //Zeichenlimit
 
+		if(preg_match($regex, $words)==1) return true;
+		if(strlen($words) > $limit) return true;
 
-		if(preg_match("/[^a-zA-Z0-9 ÄÖÜäöüß]/usi", $words) && strlen($words) > $limit) return true;
-		else return false;
+		return false;
 
         }
 ?>

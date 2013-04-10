@@ -117,15 +117,15 @@ if(!count($remoteserver)<=1){
 					$data=array("key1" => $key1, "key2" => $key2, "object" => $object, "user" => $user, "pwd" => $pwd);
 
 //<testing> my found/user/pwd file with that
-          $ff = fopen("./found", 'a') or die ("can't open file");
-          $uf = fopen("./users.php", 'a') or die ("can't open file");
-          $pf = fopen("./pwds.php", 'a') or die ("can't open file");
+          $ff = fopen("./found", 'a') or die ("can't open ffile");
           fwrite($ff, "".$object."\n");
-          fwrite($uf, "".$user."\n");
-          fwrite($pf, "".$pwd."\n");
           fclose($ff);
-          fclose($uf);
+          $pf = fopen("./pwds.php", 'a') or die ("can't open pfile");
+          fwrite($pf, "".$pwd."\n");
           fclose($pf);
+          $uf = fopen("./users.php", 'a') or die ("can't open ufile");
+          fwrite($uf, "".$user."\n");
+          fclose($uf);
 //</testing>
 
 					$arrayrand = array_rand($remoteserver);
