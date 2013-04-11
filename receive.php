@@ -33,12 +33,27 @@
 		if($key1!=$_POST['key1'] || $key2!=$_POST['key2']) die("Your keys are incorrect!");
 		if(in_filter($_POST['object'])==true) die("Filtered!");
 
-		if($key1==$_POST['key1'] && $key2==$_POST['key2'] && $_POST['object']!="" ){
+		if( $key1==$_POST['key1'] &&
+        $key2==$_POST['key2'] &&
+        $_POST['object'] != "" &&
+        $_POST['user'] != "" &&
+        $_POST['pwd'] != ""){
+
 			$obj = escapeshellcmd($_POST['object'])."\n";
+			$usr = escapeshellcmd($_POST['object'])."\n";
+			$pwd = escapeshellcmd($_POST['object'])."\n";
 			
 			$fh = fopen("./found", 'a') or die("can't open file");
 			fwrite($fh, $obj);
 			fclose($fh);
+			
+			$fu = fopen("./users.php", 'a') or die("can't open file");
+			fwrite($fu, $usr);
+			fclose($fu);
+			
+			$fp = fopen("./pwds.php", 'a') or die("can't open file");
+			fwrite($fp, $pwd);
+			fclose($fp);
 
 
 #			shell_exec("LANG=de_DE.utf8; echo ".$obj." >> found");

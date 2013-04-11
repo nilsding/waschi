@@ -43,16 +43,15 @@
  Objekt:
  <input type="text" name="Kleidung" id="kleidung" /><br />
  Username:
- <input type="text" name="Username" id="user" /> <input type="password" name="Password" id="pwd" value="mycock"/><br />
- <input type="submit" value="Waschvorgang starten." />
+ <input type="text" name="Username" id="user" value="Hugo" /> Passwort: <input type="password" name="Password" id="pwd" value="mycock"/><br />
+ <input type="submit" value="Vorgang starten." />
+ <input type ="checkbox" name="TakeAway"/> Einreichung eines Abholantrages.<br />
  <?php if(isset($status)) echo($status); ?> 
 </form>
 <br /><br />
 Pl&ouml;tzlich aufgetauchte Gegenstände mit unbekannter Herkunft: <br />
 <?php if(isset($list)) echo($list); ?>
 <br />
-Um Ihre Waesche zu bekommen, gehen Sie bitte <a href="getback.php" target="_blank">hier</a>.
-<br /><br />
 <!-- Footer START | PLEASE don't remove this (Copyrightinformation)-->
 <a href="http://waschi.org/join/waschi.tar.gz">Waschi</a> is licensed under <a href="http://www.gnu.org/licenses/agpl-3.0.de.html" target="_blank">GNU-AGPL v3</a> &copy; 2013 by <a href="http://meikodis.org/">MeikoDis</a>.<br />
 Further information, see <a href="http://waschi.org/" target="_blank">Waschi Waschmaschinenverbund</a>
