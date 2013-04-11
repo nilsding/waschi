@@ -3,7 +3,7 @@
 This is a non working Waschi port!
 
 ##Changes done:
-- included a getback.php & a giveaway.php
+- included a giveaway.php
 - changed some things in the original files
 - made my own "save-files"
 
@@ -14,9 +14,9 @@ All other changes *should* be found in source.
 - put a `<?php' on the first line of those files - to make them unreadable for others.
 
 ##Future-Plans:
-- Get a pwds/users/found transfer betweet servers (like the current object transfer)
-- Put wash.php & giveaway.php together
-- Same for index.php & getback.php
+- Get a pwds/users/found transfer betweet servers (like the current object transfer) (should work with this)
+- Put wash.php & giveaway.php together (nope!)
+- Same for index.php & getback.php (done!)
 - Write client-files (echowash.php like) to help coders by making work easier
 - Implement a function to send every success giveaway (just usernames) to waschi.org - For a cool high-score list!
 
