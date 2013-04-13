@@ -41,10 +41,10 @@
 </pre>
 <form method="POST">
  Objekt:
- <input type="text" name="Kleidung" id="kleidung" /><br />
+ <input type="text" name="Kleidung" id="kleidung" /><input type ="checkbox" name="RandomWord"/>Zufälliges Objekt<br />
  Username:
  <input type="text" name="Username" id="user" value="Hugo" /> Passwort: <input type="password" name="Password" id="pwd" value="mycock"/><br />
- <input type="submit" value="Vorgang starten." />
+ <input type="submit" value="Vorgang starten" />
  <input type ="checkbox" name="TakeAway"/> Einreichung eines Abholantrages.<br />
  <?php if(isset($status)) echo($status); ?> 
 </form>
