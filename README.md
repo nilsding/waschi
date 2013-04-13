@@ -62,7 +62,7 @@ You can do it on your server through typing
 
 
 ### Register your Waschi!
-Go to http://waschi.org/register/ to register your Waschi. After registering you'll get two keys via mail which you have to put into the "key.php".
+Go to http://waschi.org/register/ to register your Waschi. After registering you'll get two keys via mail which you have to put into a "key.php", or you will receive the whole key-file.
 
 
 
