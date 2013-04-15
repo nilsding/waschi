@@ -31,10 +31,7 @@ $ff = file("found");
 $uf = file("users.php");
 $pf = file("pwds.php");
 
-$keyarray=array("key1" => $key1, "key2" => $key2);
-
-$remoteserverarray=post_request("http://waschi.org/servers.php", $keyarray);
-$remoteserver=explode("\n",$remoteserverarray['content']);
+$remoteserver=explode("\n",file_get_contents("<A HREF="http://waschi.org/servers.php"> http://waschi.org/servers.php</A>"));
 
 if(!count($remoteserver)<=1){
 
