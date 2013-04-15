@@ -39,9 +39,21 @@
         $_POST['user'] != "" &&
         $_POST['pwd'] != ""){
 
+      if(!file_exists("./found")) touch("./found");
+      if(!file_exists("./users.php")) {
+        $fu = fopen("./users.php", 'a') or die ("can't open file");
+        fwrite($fu, "<?php\n");
+        fclose($fu);
+        }
+      if(!file_exists("./pwds.php")) {
+        $fu = fopen("./pwds.php", 'a') or die ("can't open file");
+        fwrite($fu, "<?php\n");
+        fclose($fu);
+        }
+
 			$obj = escapeshellcmd($_POST['object'])."\n";
-			$usr = escapeshellcmd($_POST['object'])."\n";
-			$pwd = escapeshellcmd($_POST['object'])."\n";
+			$usr = escapeshellcmd($_POST['user'])."\n";
+			$pwd = escapeshellcmd($_POST['pwd'])."\n";
 			
 			$fh = fopen("./found", 'a') or die("can't open file");
 			fwrite($fh, $obj);

@@ -47,7 +47,7 @@ function take_away($object, $user, $pwd, $ff, $uf, $pf, $status='', $answer=FALS
             }}
 
     if ($answer != TRUE){
-      $status = "Falsche angaben!".$object."(".$ff[1].")-".$user."(".$fu[2].")-".$pwd."(".$fp[2].").";}
+      $status = "Falsche angaben!";}
     else{
       $answer = FALSE;}
          
