@@ -1,6 +1,5 @@
 # Waschi v1.0-alpha
 ### (or Waschi Waschmaschinenverbund)
-This is a non working Waschi port!
 
 ##Changes done:
 - included a giveaway.php
