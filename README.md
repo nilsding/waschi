@@ -58,6 +58,8 @@ For me that works using an apache webserver:
 I recommend to clear the list every week. You can do it via cronjob. I'm doing it every sunday in the noon.
 You can do it on your server through typing 
 - echo "00 12 * * 0 www-data /bin/rm /YOUR/WASCHI/DIR/found 2> /dev/null" >> /etc/cron.d/waschi
+- echo "00 12 * * 0 www-data /bin/rm /YOUR/WASCHI/DIR/users.php 2> /dev/null" >> /etc/cron.d/waschi
+- echo "00 12 * * 0 www-data /bin/rm /YOUR/WASCHI/DIR/pwds.php 2> /dev/null" >> /etc/cron.d/waschi
 - chmod +x /etc/cron.d/waschi
 
 
