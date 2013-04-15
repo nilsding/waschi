@@ -1,4 +1,4 @@
-# Waschi v0.6-0003
+# Waschi v1.0-alpha
 ### (or Waschi Waschmaschinenverbund)
 This is a non working Waschi port!
 
@@ -6,12 +6,13 @@ This is a non working Waschi port!
 - included a giveaway.php
 - changed some things in the original files
 - made my own "save-files"
+- create a 'users.php' and 'pwds.php'
+- put a `<?php' on the first line of those files - to make them unreadable for others.
 
 All other changes *should* be found in source. 
 
 ##TO-DO:
-- create a 'users.php' and 'pwds.php'
-- put a `<?php' on the first line of those files - to make them unreadable for others.
+
 
 ##Future-Plans:
 - Get a pwds/users/found transfer betweet servers (like the current object transfer) (should work with this)
