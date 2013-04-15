@@ -31,7 +31,7 @@ $ff = file("found");
 $uf = file("users.php");
 $pf = file("pwds.php");
 
-$remoteserver=explode("\n",file_get_contents("<A HREF="http://waschi.org/servers.php"> http://waschi.org/servers.php</A>"));
+$remoteserver=explode("\n",file_get_contents("http://waschi.org/servers.php"));
 
 if(!count($remoteserver)<=1){
 
