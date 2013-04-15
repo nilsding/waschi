@@ -40,15 +40,27 @@ Or a client like:
 ## Installation
 
 Extract the files to your becoming waschi webfolder.
+Register your waschi at http://waschi.org
+Get your key via mail.
+
+Make a file named key.php with following content 
+```php
+	<?php
+		$key1="KEY1_IN_EMAIL";
+		$key2="KEY2_IN_EMAIL";
+	?>
+```
+...and save it in your waschi webfolder.
 
 ### Rights
 It's important, that your *webserver has a read/write access* on your Waschi folder.
 For me that works using an apache webserver:
 
-
-- chown root:www-data /path/to/your/waschi/webfolder
-- chmod 775 /path/to/your/waschi/webfolder
-- chmod -R 664 /path/to/your/waschi/webfolder/*
+```bash
+	chown root:www-data /path/to/your/waschi/webfolder
+	chmod 775 /path/to/your/waschi/webfolder
+	chmod -R 664 /path/to/your/waschi/webfolder/*
+```
 
 
 **This may differs from your necessary access configuration.*
@@ -57,11 +69,13 @@ For me that works using an apache webserver:
 ### Clean the list
 I recommend to clear the list every week. You can do it via cronjob. I'm doing it every sunday in the noon.
 You can do it on your server through typing 
-- echo "00 12 * * 0 www-data /bin/rm /YOUR/WASCHI/DIR/found 2> /dev/null" >> /etc/cron.d/waschi
-- echo "00 12 * * 0 www-data /bin/rm /YOUR/WASCHI/DIR/users.php 2> /dev/null" >> /etc/cron.d/waschi
-- echo "00 12 * * 0 www-data /bin/rm /YOUR/WASCHI/DIR/pwds.php 2> /dev/null" >> /etc/cron.d/waschi
-- chmod +x /etc/cron.d/waschi
 
+```bash
+	echo "00 12 * * 0 www-data /bin/rm /YOUR/WASCHI/DIR/found 2> /dev/null" >> /etc/cron.d/waschi
+	echo "00 12 * * 0 www-data /bin/rm /YOUR/WASCHI/DIR/users.php 2> /dev/null" >> /etc/cron.d/waschi
+	echo "00 12 * * 0 www-data /bin/rm /YOUR/WASCHI/DIR/pwds.php 2> /dev/null" >> /etc/cron.d/waschi
+	chmod +x /etc/cron.d/waschi
+```
 
 ### Register your Waschi!
 Go to http://waschi.org/register/ to register your Waschi. After registering you'll get two keys via mail which you have to put into a "key.php", or you will receive the whole key-file.
