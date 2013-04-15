@@ -41,7 +41,7 @@
 </pre>
 <form method="POST">
  Objekt:
- <input type="text" name="Kleidung" id="kleidung" /><input type ="checkbox" name="RandomWord"/>Zufälliges Objekt<br />
+ <input type="text" name="Kleidung" id="kleidung" /><input type ="checkbox" name="RandomWord"/>Zuf&auml;lliges Objekt<br />
  Username:
  <input type="text" name="Username" id="user" value="Hugo" /> Passwort: <input type="password" name="Password" id="pwd" value="mycock"/><br />
  <input type="submit" value="Vorgang starten" />
@@ -49,7 +49,7 @@
  <?php if(isset($status)) echo($status); ?> 
 </form>
 <br /><br />
-Pl&ouml;tzlich aufgetauchte Gegenstände mit unbekannter Herkunft: <br />
+Pl&ouml;tzlich aufgetauchte Gegenst&auml;nde mit unbekannter Herkunft: <br />
 <?php if(isset($list)) echo($list); ?>
 <br />
 <!-- Footer START | PLEASE don't remove this (Copyrightinformation)-->
