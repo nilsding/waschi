@@ -34,6 +34,18 @@
 
 
 	if(!file_exists("./found")) touch("./found");
+        if(!file_exists("./users.php")) {
+	        $fu = fopen("./users.php", 'a') or die ("can't open file");
+	        fwrite($fu, "<?php\n");
+        	fclose($fu);
+        }
+        if(!file_exists("./pwds.php")) {
+		$fu = fopen("./pwds.php", 'a') or die ("can't open file");
+		fwrite($fu, "<?php\n");
+		fclose($fu);
+        }
+
+
 
 	$lista=explode("\n", file_get_contents("./found"));
 	$lista=array_reverse($lista);
