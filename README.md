@@ -1,8 +1,26 @@
 # Waschi v0.6-0003
 ### (or Waschi Waschmaschinenverbund)
-This is Waschi.
-A "hide and seek of your laundry" network game over the whole webservers!
+This is a non working Waschi port!
 
+##Changes done:
+- included a giveaway.php
+- changed some things in the original files
+- made my own "save-files"
+
+All other changes *should* be found in source. 
+
+##TO-DO:
+- create a 'users.php' and 'pwds.php'
+- put a `<?php' on the first line of those files - to make them unreadable for others.
+
+##Future-Plans:
+- Get a pwds/users/found transfer betweet servers (like the current object transfer) (should work with this)
+- Put wash.php & giveaway.php together (nope!)
+- Same for index.php & getback.php (done!)
+- Write client-files (echowash.php like) to help coders by making work easier
+- Implement a function to send every success giveaway (just usernames) to waschi.org - For a cool high-score list!
+
+A "hide and seek of your laundry" network game over the whole webservers!
 
 ## Requirements
 For hosting:
@@ -12,13 +30,12 @@ For hosting:
 
 For playing:
 - A browser
-or
-- washi.lisp ( see: https://gist.github.com/codepony/4994410 )
-- waschi-cs-client ( see: https://github.com/pixeldesu/waschi-cs-client )
-- waschi-cli (Ruby) ( see: https://github.com/fliiiix/waschi-cli/ )
-- waschi-cli (Python) ( see: https://github.com/vanita5/washi-cli/ )
 
-
+Or a client like:
+- washi.lisp (https://gist.github.com/codepony/4994410) written in CommonLisp
+- waschi-cs-client (https://github.com/pixeldesu/waschi-cs-client) written in C#
+- waschi-cli (https://github.com/fliiiix/waschi-cli/) written in ruby
+- washi-cli (https://github.com/vanita5/washi-cli) written in python
 
 ## Installation
 
@@ -45,7 +62,7 @@ You can do it on your server through typing
 
 
 ### Register your Waschi!
-Go to http://waschi.org/register/ to register your Waschi. After registering you'll get two keys via mail which you have to put into the "key.php".
+Go to http://waschi.org/register/ to register your Waschi. After registering you'll get two keys via mail which you have to put into a "key.php", or you will receive the whole key-file.
 
 
 
