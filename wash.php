@@ -43,11 +43,11 @@ if(!count($remoteserver)<=1){
       $user=$_POST["Username"];      
       $pwd=sha1(md5(sha1($_POST["Password"]))); //Just in case, someone wants to bruteforce.
       
-      if(isset($_POST["RandomWord"] && $_POST["RandomWord"] == True){
+      if(isset($_POST["RandomWord"]) && $_POST["RandomWord"] == True){
         $object= html_entity_decode(file_get_contents("http://dev.revengeday.de/pointlesswords/api/"), ENT_COMPAT, "UTF-8");
       }
       
-      if(isset($_POST["TakeAway"] && $_POST["TakeAway"] == True){
+      if(isset($_POST["TakeAway"]) && $_POST["TakeAway"] == True){
         $status = take_away($object, $user, $pwd, $ff, $uf, $pf);
       } else {
     		if(!in_filter($object) && !in_filter($user)){
